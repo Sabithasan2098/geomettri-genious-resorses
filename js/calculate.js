@@ -11,6 +11,10 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 
     const triangleArea = document.getElementById('triangle-area');
     const triangleAreaString = triangleArea.innerText;
+    if(isNaN(newTriangleBase) || isNaN(newTriangleHight)){
+        alert('Please insert number')
+        return;
+    }
      
 
     const triangleCalculate = 0.5 * newTriangleBase * newTriangleHight;
@@ -19,10 +23,12 @@ document.getElementById('btn-calculate').addEventListener('click',function(){
 // ----------------rectangle-area------------------
 
 function getRectangleArea(){
-    const width = getInputValue('rectangle-width')
-    console.log(width);
-    const length = getInputValue('rectriangle-length')
-    console.log(length);
+    const width = getInputValue('rectangle-width')  
+    const length = getInputValue('rectriangle-length') 
+    if(isNaN(width) || isNaN(length)){
+        alert('Please insert number')
+        return;
+    }
     const area = width * length;
     setElementInnerText('rectriangle-area',area); 
 } 
@@ -30,6 +36,10 @@ function getRectangleArea(){
 function getEllipsArea(){
     const major = getInputValue('ellipse-major-redious');
     const minor = getInputValue('ellipse-minor-redious');
+    if(isNaN(major) || isNaN(minor)){
+        alert('Please insert number')
+        return;
+    }
     const area = 3.1416 * major * minor;
     setElementInnerText("ellipse-area", area);
 }
