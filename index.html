@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geomettry Genious</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header>
+
+  </header>
+  <main>
+    <div class="flex flex-col lg:flex-row">
+      <div class="flex-1 gap-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div class="card w-96 bg-base-100 shadow-xl  ">
+          <figure><img src="images/triangle.png" alt="Triangle" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Triangle</h2>
+            <p> Area (A) = 0.5 x b x h</p>
+            <p>
+              <input type="text" name="" id="triangle-base" class="px-4 py-2 bg-gray-200 w-24 rounded"
+                placeholder="base"><span class="ml-2">cm</span>
+              <input type="text" name="" id="triangle-hight" class="px-4 py-2 bg-gray-200 w-24 rounded ml-6"
+                placeholder="hight"><span class="ml-2">cm</span>
+            </p>
+            <p class="text-2xl my-2 bg-gray-200 px-12 py-2">Area: <span id="triangle-area">cm </span><sup>2</sup></p>
+            <div class="card-actions ">
+              <button class="btn btn-primary w-full" id="btn-calculate">Claculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- rectangle-claculation -->
+        <div class="card w-96 bg-base-100 shadow-xl  ">
+          <figure><img src="images/rectangle.png" alt="Rectriangle" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Rectriangle</h2>
+            <p> Area (A) = w x i</p>
+            <p>
+              <input type="text" name="" id="rectangle-width" class="px-4 py-2 bg-gray-200 w-24 rounded"
+                placeholder="base"><span class="ml-2">cm</span>
+              <input type="text" name="" id="rectriangle-length" class="px-4 py-2 bg-gray-200 w-24 rounded ml-6"
+                placeholder="hight"><span class="ml-2">cm</span>
+            </p>
+            <p class="text-2xl my-2 bg-gray-200 px-12 py-2">Area: <span id="rectriangle-area">cm </span><sup>2</sup></p>
+            <div class="card-actions ">
+              <button class="btn btn-primary w-full" onclick="getRectangleArea()">Claculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- ---------ellipse---------- -->
+        <div class="card w-96 bg-base-100 shadow-xl  ">
+          <figure><img src="images/ellipse.png" alt="ellipse" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Ellipse</h2>
+            <p> Area (A) = w x i</p>
+            <p>
+              <input type="text" name="" id="ellipse-major-redious" class="px-4 py-2 bg-gray-200 w-24 rounded"
+                placeholder="major"><span class="ml-2">cm</span>
+              <input type="text" name="" id="ellipse-minor-redious" class="px-4 py-2 bg-gray-200 w-24 rounded ml-6"
+                placeholder="minor"><span class="ml-2">cm</span>
+            </p>
+            <p class="text-2xl my-2 bg-gray-200 px-12 py-2">Area: <span id="ellipse-area">cm </span><sup>2</sup></p>
+            <div class="card-actions ">
+              <button class="btn btn-primary w-full" onclick="getEllipsArea()">Claculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- -------------- -->
+        <div class="card w-96 bg-base-100 shadow-xl  ">
+          <figure><img src="images/triangle.png" alt="Triangle" /></figure>
+          <div class="card-body">
+            <h2 class="card-title">Triangle</h2>
+            <p>If a dog chews shoes whose shoes does he choose?</p>
+            <div class="card-actions">
+              <button class="btn btn-primary">Claculate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=" w-96 ">
+        <h2 class="text-4xl justify-center">Area Claculator</h2>
+      </div>
+    </div>
+  </main>
+  <script src="js/calculate.js"></script>
+</body>
+
+</html>
